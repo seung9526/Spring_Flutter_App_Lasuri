@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:suuitch/screens/roleUp_page.dart';
 
 class MainPage extends StatefulWidget {
   @override
@@ -14,11 +15,11 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
         backgroundColor: Colors.white,
         elevation: 0.0,
         title: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 10.0),
+          padding: EdgeInsets.symmetric(horizontal: 5.0),
           child: Row(
             children: <Widget>[
               Expanded(
-                child: Image.asset('assets/logo/suuitch_main_logo.png', height: 45),
+                child: Image.asset('assets/logo/suuitch_main_logo.png'),
               ),
             ],
           ),
@@ -27,6 +28,11 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
           IconButton(
             onPressed: () {
               // 아이콘을 눌렀을 때 수행할 작업
+              Navigator.push(
+                context,MaterialPageRoute(
+                  builder: (context) => RoleUpPage()
+                ),
+              );
             },
             icon: Ink(
               decoration: BoxDecoration(
@@ -40,7 +46,7 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            padding: const EdgeInsets.symmetric(horizontal: 17.0),
             child: IconButton(
               onPressed: () {
                 // 아이콘을 눌렀을 때 수행할 작업

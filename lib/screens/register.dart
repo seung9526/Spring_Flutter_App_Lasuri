@@ -52,7 +52,7 @@ class _RegisterPageState extends State<RegisterPage> {
   }
 
   Future<void> registerUser() async {
-    final String apiUrl = 'http://192.168.0.18:8081/api/user/register';
+    final String apiUrl = 'http://192.168.50.135:8081/api/user/register';
 
     // 입력한 데이터 가져오기
     final String email = emailController.text;
